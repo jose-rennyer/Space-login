@@ -1,0 +1,161 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:arial;
+    list-style:none;
+}
+.container{
+    display:flex;
+    height:100vh;
+}
+.container .formulario{
+    background-color:#050919;
+    flex:0.8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container form{
+    display:flex;
+    flex-direction:column;
+    background-color:#050919;
+    padding:25px 30px;
+    border:1px solid #051950;
+    border-radius:5px;
+    width:90%;
+}
+.container label{
+    margin-bottom:20px;
+    font-size:18px;
+    color:cyan;
+}
+.container input{
+    margin-top:10px;
+    width:max(95%, 200px);
+    height:30px;
+    font-size:17px;
+    padding:20px 10px;
+    outline:0;
+    background-image:linear-gradient(#395492, #395492);
+    border:1px solid cyan;
+    border-radius:5px;
+
+}
+.container input::placeholder{
+    color:cyan;
+    font-size:14px;
+}
+form .login{
+    background-image:linear-gradient(#c27fd8, #6766c4);
+    border:none;
+    padding:15px;
+    font-size:17px;
+    color:#fff;;
+    width:max(95%, 200px);
+    cursor:pointer;
+    margin-bottom:20px;
+}
+form .create{
+    background-image:linear-gradient(#3d83ac, #224a50);
+    border:none;
+    padding:15px;
+    font-size:17px;
+    color:#ccc;
+    width:max(95%, 200px);
+    cursor:pointer;
+}
+
+.container .imagem{
+    flex:1;
+    background-image:url(../img/nave.jpg);
+    background-position:center;
+    background-size:cover;
+}
+.container .menu{
+    height:40px;
+    width:40px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    margin-right:10px;
+    margin-top:20px;
+}
+.menuaberto{
+    color:#fff;
+    width:90% !important
+}
+.container .menu .ml{
+    background-color:blue;
+    border:1px solid gold;
+    height:4px;
+}
+
+aside{
+    width:40vw;
+    position:fixed;
+    top:0;
+    right:0;
+    display:flex;
+    justify-content:flex-end;
+}
+aside .menu2{
+    background-color:rgba(5, 25, 80, 0.7);
+    width:0%;
+    height:100vh;
+    transition:1s linear all;
+    margin-left:20px;
+}
+aside .menu2 ul li{
+    color:cyan;
+    font-size:20px;
+    padding:15px 10px;
+    cursor:pointer;
+}
+aside .menu2 ul li:hover{
+    background-color:#3d83ac;
+}
+.button-final{
+    display:none;
+}
+
+
+
+@media (min-width:451px) and (max-width:850px){
+    .container .imagem{
+        flex:0.5;
+    }
+    .container .formulario{
+        flex:1;
+    }
+}
+@media (max-width:500px){
+    .container{
+        display:block;
+    }
+    .container .imagem{
+        display:none;
+    }
+    .container form{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        background-color:#050919;
+        padding:25px 5px;
+        border:none;
+        border-radius:5px;
+        width:90%;
+        height:100vh;
+    }
+    .button-final{
+        display:inline-block;
+        color:white;
+        font-size:18px;
+        margin-top:20px;
+        cursor:pointer;
+        width:50px;
+    }
+    .button-final:hover{
+        text-decoration:underline;
+    }
+}
